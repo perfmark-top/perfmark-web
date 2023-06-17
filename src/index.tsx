@@ -1,31 +1,13 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import {createBrowserRouter, createRoutesFromElements, Route, RouterProvider} from "react-router-dom";
-import HomePage from "./component/home/HomePage";
-import GpuInfoPage from "./component/info/gpu/GpuInfoPage";
-import CpuInfoPage from "./component/info/cpu/CpuInfoPage";
-import GpuListFragment from "./component/home/gpu/GpuListFragment";
-import CpuListFragment from "./component/home/cpu/CpuListFragment";
+import App from "./component/App";
 
-const router = createBrowserRouter(
-    createRoutesFromElements(
-        <>
-            <Route path="/info/gpu" element={<GpuInfoPage />} />
-            <Route path="/info/cpu" element={<CpuInfoPage />} />
-            <Route path="/home" element={<HomePage />}>
-                <Route path="/home/gpu" element={<GpuListFragment />} />
-                <Route path="/home/cpu" element={<CpuListFragment />} />
-            </Route>
-        </>
-    )
-)
-
-
-ReactDOM.createRoot(document.getElementById("root")!).render(
+ReactDOM.render(
     <React.StrictMode>
-        <RouterProvider router={router} />
-    </React.StrictMode>
+        <App />
+    </React.StrictMode>,
+    document.getElementById("root")!
 )
 
 
