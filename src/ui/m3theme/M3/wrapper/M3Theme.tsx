@@ -1,6 +1,6 @@
 
 import { useContext, useMemo } from "react";
-import { CssBaseline, createTheme, ThemeProvider } from '@mui/material';
+import { CssBaseline, createTheme, ThemeProvider } from "@mui/material";
 import { deepmerge } from "@mui/utils";
 import { ThemeModeContext, ThemeSchemeContext, getMUIComponents, getMUIPalette } from "../..";
 

@@ -2,13 +2,13 @@
 import {
     Theme,
     ComponentsProps, ComponentsOverrides, ComponentsVariants
-} from '@mui/material';
+} from "@mui/material";
 
 interface M3AppBar {
     MuiAppBar: {
-        defaultProps?: ComponentsProps['MuiAppBar'];
-        styleOverrides?: ComponentsOverrides<Theme>['MuiAppBar'];
-        variants?: ComponentsVariants['MuiAppBar'];
+        defaultProps?: ComponentsProps["MuiAppBar"];
+        styleOverrides?: ComponentsOverrides<Theme>["MuiAppBar"];
+        variants?: ComponentsVariants["MuiAppBar"];
     }
 }
 
@@ -18,7 +18,7 @@ export const getAppBar = (theme: Theme): M3AppBar => {
         MuiAppBar: {
             defaultProps: {
                 elevation: 0,
-                color: 'default'
+                color: "default"
             },
             styleOverrides: {
                 colorDefault: {

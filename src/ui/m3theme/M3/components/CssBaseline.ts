@@ -2,9 +2,9 @@ import { Theme, ComponentsProps, ComponentsOverrides, ComponentsVariants } from 
 
 interface M3CssBaseline {
     MuiCssBaseline: {
-        defaultProps?: ComponentsProps['MuiCssBaseline'];
-        styleOverrides?: ComponentsOverrides<Theme>['MuiCssBaseline'];
-        variants?: ComponentsVariants['MuiCssBaseline'];
+        defaultProps?: ComponentsProps["MuiCssBaseline"];
+        styleOverrides?: ComponentsOverrides<Theme>["MuiCssBaseline"];
+        variants?: ComponentsVariants["MuiCssBaseline"];
     }
 };
 
@@ -16,8 +16,8 @@ export const getCssBaseline = (_theme: Theme): M3CssBaseline => {
 
             },
             styleOverrides: {
-                '*::-webkit-scrollbar': {
-                    'display': 'none'
+                "*::-webkit-scrollbar": {
+                    "display": "none"
                 }
             }
         }

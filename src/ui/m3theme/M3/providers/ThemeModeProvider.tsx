@@ -1,5 +1,5 @@
-import { FC, createContext } from 'react';
-import { ThemeMode, useThemeMode } from '../..';
+import { FC, createContext } from "react";
+import { ThemeMode, useThemeMode } from "../..";
 
 
 export type ThemeModeContextType = {
@@ -13,7 +13,7 @@ export interface ThemeModeProviderProps {
 };
 
 export const ThemeModeContext = createContext<ThemeModeContextType>({
-    themeMode: 'light',
+    themeMode: "light",
     toggleTheme: () => { },
     setThemeMode: () => { }
 });

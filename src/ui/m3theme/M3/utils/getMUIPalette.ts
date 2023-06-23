@@ -1,14 +1,14 @@
 
 import { ThemeMode, ThemeScheme, TonalPalette } from "../..";
-import { ThemeOptions, } from '@mui/material';
+import { ThemeOptions, } from "@mui/material";
 
-declare module '@mui/material/styles/createTheme' {
+declare module "@mui/material/styles/createTheme" {
     interface ThemeOptions {
         tones?: TonalPalette
     }
 }
 
-declare module '@mui/material/styles/createPalette' {
+declare module "@mui/material/styles/createPalette" {
     interface Palette {
         [index: string]: PaletteColor;
         //primary: PaletteColor;

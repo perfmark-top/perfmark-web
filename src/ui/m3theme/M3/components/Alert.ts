@@ -2,9 +2,9 @@ import { Theme, ComponentsProps, ComponentsOverrides, ComponentsVariants } from 
 
 interface M3Alert {
     MuiAlert: {
-        defaultProps?: ComponentsProps['MuiAlert'];
-        styleOverrides?: ComponentsOverrides<Theme>['MuiAlert'];
-        variants?: ComponentsVariants['MuiAlert'];
+        defaultProps?: ComponentsProps["MuiAlert"];
+        styleOverrides?: ComponentsOverrides<Theme>["MuiAlert"];
+        variants?: ComponentsVariants["MuiAlert"];
     }
 };
 
@@ -13,11 +13,11 @@ export const getAlert = (theme: Theme): M3Alert => {
     return {
         MuiAlert: {
             defaultProps: {
-                variant: 'standard'
+                variant: "standard"
             },
             styleOverrides: {
                 root: {
-                    borderRadius: '20px'
+                    borderRadius: "20px"
                 },
                 standardError: {
                     background: palette.errorContainer.main,

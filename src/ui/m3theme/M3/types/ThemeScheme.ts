@@ -1,5 +1,5 @@
 import { DarkTokensDefault, LightTokensDefault, ThemeTokens } from "./ThemeTokens"
-import { TonalPalette, TonalPaletteDefault } from './TonalPalette';
+import { TonalPalette, TonalPaletteDefault } from "./TonalPalette";
 
 export type ThemeScheme = {
     tones: TonalPalette;

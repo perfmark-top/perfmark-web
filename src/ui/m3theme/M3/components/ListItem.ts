@@ -2,9 +2,9 @@ import { Theme, ComponentsProps, ComponentsOverrides, ComponentsVariants } from 
 
 interface M3ListItem {
     MuiListItem: {
-        defaultProps?: ComponentsProps['MuiListItem'];
-        styleOverrides?: ComponentsOverrides<Theme>['MuiListItem'];
-        variants?: ComponentsVariants['MuiListItem'];
+        defaultProps?: ComponentsProps["MuiListItem"];
+        styleOverrides?: ComponentsOverrides<Theme>["MuiListItem"];
+        variants?: ComponentsVariants["MuiListItem"];
     }
 };
 
@@ -16,7 +16,7 @@ export const getListItem = (_theme: Theme): M3ListItem => {
                 root: {
                     paddingTop: 1,
                     paddingBottom: 1,
-                    '& .MuiListItemButton-root': {
+                    "& .MuiListItemButton-root": {
                         paddingTop: 8,
                         paddingBottom: 8
                     }

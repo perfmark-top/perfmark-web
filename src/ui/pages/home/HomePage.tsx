@@ -1,18 +1,23 @@
-import React, {FC, useState} from "react";
+import {FC, useState} from "react";
 
 import "../../../assets/css/HomePage.scss"
 import {Outlet} from "react-router-dom";
-import HomeDrawer from "../../component/home/HomeDrawer";
-import HomeAppBar from "../../component/home/HomeAppBar";
+import HomeDrawer from "../../component/HomeDrawer.tsx";
+import HomeAppBar from "../../component/HomeAppBar.tsx";
 import {Box, SxProps, useMediaQuery, useTheme} from "@mui/material";
+import {TargetTypeEnum, useTargetType} from "../App.tsx";
 
 const drawerWidth = 260;
 
 const HomePage: FC = () => {
     const theme = useTheme()
-    const isSmUp = useMediaQuery(theme.breakpoints.up('md'))
+    const isSmUp = useMediaQuery(theme.breakpoints.up("md"))
 
     const [ isMobileOpen, setMobileOpen ] = useState(false)
+
+    const [ cpuSearch, setCpuSearch ] = useState("")
+    const [ gpuSearch, setGpuSearch ] = useState("")
+    const routerType = useTargetType()
 
     const rootStyles: SxProps = {
         display: "flex",
@@ -24,8 +29,8 @@ const HomePage: FC = () => {
     };
     const homeStyles: SxProps = {
         flex: 1,
-        display: 'flex',
-        flexDirection: 'column',
+        display: "flex",
+        flexDirection: "column",
     };
     const containerStyles: SxProps = {
         p: 0,
@@ -45,10 +50,13 @@ const HomePage: FC = () => {
                 )}
                 <HomeDrawer variant="permanent"
                             PaperProps={{ style: { width: drawerWidth } }}
-                            sx={{ display: { md: 'block', sm: 'none', xs: 'none' } }} />
+                            sx={{ display: { md: "block", sm: "none", xs: "none" } }} />
             </Box>
             <Box sx={homeStyles}>
-                <HomeAppBar onDrawerToggle={() => setMobileOpen(!isMobileOpen)} />
+                <HomeAppBar onSearch={routerType == TargetTypeEnum.CPU ? setCpuSearch : setGpuSearch}
+                            search={routerType == TargetTypeEnum.CPU ? cpuSearch : gpuSearch}
+                            type={routerType}
+                            onDrawerToggle={() => setMobileOpen(!isMobileOpen)} />
                 <Box sx={containerStyles}>
                     <Outlet />
                 </Box>

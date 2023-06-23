@@ -2,9 +2,9 @@ import { Theme, ComponentsProps, ComponentsOverrides, ComponentsVariants } from 
 
 interface M3ListItemIcon {
     MuiListItemIcon: {
-        defaultProps?: ComponentsProps['MuiListItemIcon'];
-        styleOverrides?: ComponentsOverrides<Theme>['MuiListItemIcon'];
-        variants?: ComponentsVariants['MuiListItemIcon'];
+        defaultProps?: ComponentsProps["MuiListItemIcon"];
+        styleOverrides?: ComponentsOverrides<Theme>["MuiListItemIcon"];
+        variants?: ComponentsVariants["MuiListItemIcon"];
     }
 };
 
@@ -14,10 +14,10 @@ export const getListItemIcon = (_theme: Theme): M3ListItemIcon => {
         MuiListItemIcon: {
             styleOverrides: {
                 root: {
-                    color: 'inherit',
+                    color: "inherit",
                     minWidth: 32,
-                    '&.Mui-selected': {
-                        fontWeight: 'bold'
+                    "&.Mui-selected": {
+                        fontWeight: "bold"
                     },
                 },
             }

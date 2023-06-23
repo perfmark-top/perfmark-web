@@ -2,13 +2,13 @@
 import {
     Theme,
     ComponentsProps, ComponentsOverrides, ComponentsVariants
-} from '@mui/material';
+} from "@mui/material";
 
 interface M3Accordion {
     MuiAccordion: {
-        defaultProps?: ComponentsProps['MuiAccordion'];
-        styleOverrides?: ComponentsOverrides<Theme>['MuiAccordion'];
-        variants?: ComponentsVariants['MuiAccordion'];
+        defaultProps?: ComponentsProps["MuiAccordion"];
+        styleOverrides?: ComponentsOverrides<Theme>["MuiAccordion"];
+        variants?: ComponentsVariants["MuiAccordion"];
     }
 }
 
@@ -22,16 +22,16 @@ export const getAccordion = (theme: Theme): M3Accordion => {
                     border: `0px solid ${palette.outlineVariant.main}`,
                     color: palette.onBackground.main,
                     backgroundColor: palette.surfaceBright.main,
-                    '&:before': {
+                    "&:before": {
                         backgroundColor: palette.surfaceBright.main,
-                        display: 'none'
+                        display: "none"
                     },
-                    '&.Mui-disabled': {
+                    "&.Mui-disabled": {
                         backgroundColor: palette.inverseOnSurface.main,
                         color: palette.inverseSurface.main,
                         border: `0px solid ${palette.outlineVariant.main}`,
                     },
-                    '& .MuiAccordionSummary-root > .MuiAccordionSummary-expandIconWrapper ': {
+                    "& .MuiAccordionSummary-root > .MuiAccordionSummary-expandIconWrapper ": {
                         color: palette.onBackground.main,
                     }
                 }

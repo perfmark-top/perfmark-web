@@ -1,4 +1,4 @@
-import { Theme, } from '@mui/material';
+import { Theme, } from "@mui/material";
 import {
     getAccordion,
     getAlert,
@@ -17,10 +17,10 @@ import {
     getToggleButton,
     getToggleButtonGroup,
     getTooltip
-} from '../components';
+} from "../components";
 
 
-type M3Components = { components: Theme['components'] };
+type M3Components = { components: Theme["components"] };
 
 export const getMUIComponents = (theme: Theme) => {
     //const { palette } = theme;

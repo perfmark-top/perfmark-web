@@ -2,9 +2,9 @@ import { Theme, ComponentsProps, ComponentsOverrides, ComponentsVariants } from 
 
 interface M3Tooltip {
     MuiTooltip: {
-        defaultProps?: ComponentsProps['MuiTooltip'];
-        styleOverrides?: ComponentsOverrides<Theme>['MuiTooltip'];
-        variants?: ComponentsVariants['MuiTooltip'];
+        defaultProps?: ComponentsProps["MuiTooltip"];
+        styleOverrides?: ComponentsOverrides<Theme>["MuiTooltip"];
+        variants?: ComponentsVariants["MuiTooltip"];
     }
 };
 

@@ -1,4 +1,4 @@
-import { createContext, FC, useLayoutEffect, useState } from 'react';
+import { createContext, FC, useLayoutEffect, useState } from "react";
 
 import { generateDesignTokens, ThemeScheme, ThemeSchemeDefault, useTonalPalette } from "../..";
 
@@ -22,8 +22,8 @@ const ThemeSchemeProvider: FC<ThemeSchemeProviderProps> = ({ children }) => {
     const [themeScheme, setThemeScheme] = useState<ThemeScheme>(ThemeSchemeDefault);
 
     useLayoutEffect(() => {
-        const lightTokens = generateDesignTokens('light', tonalPalette);
-        const darkTokens = generateDesignTokens('dark', tonalPalette);
+        const lightTokens = generateDesignTokens("light", tonalPalette);
+        const darkTokens = generateDesignTokens("dark", tonalPalette);
 
         setThemeScheme({
             light: lightTokens,

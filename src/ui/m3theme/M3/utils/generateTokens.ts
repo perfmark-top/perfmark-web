@@ -1,7 +1,7 @@
 import { argbFromHex, hexFromArgb, themeFromSourceColor } from "@material/material-color-utilities";
 import { ThemeMode, ThemeTokens, TonalPalette, Tone } from "../..";
 
-const getColorToken = (themeMode: ThemeMode, palette: Tone, lightLevel: number, darkLevel: number): string => palette[themeMode == 'light' ? lightLevel : darkLevel];
+const getColorToken = (themeMode: ThemeMode, palette: Tone, lightLevel: number, darkLevel: number): string => palette[themeMode == "light" ? lightLevel : darkLevel];
 
 export const generateDesignTokens = (themeMode: ThemeMode, tonalPalette: TonalPalette): ThemeTokens => {
 
@@ -9,19 +9,19 @@ export const generateDesignTokens = (themeMode: ThemeMode, tonalPalette: TonalPa
 
     const { customColors } = themeFromSourceColor(argbFromHex(tonalPalette.primary[40]), [
         {
-            name: 'info',
-            value: argbFromHex('#0288d1'),
+            name: "info",
+            value: argbFromHex("#0288d1"),
             blend: true
         },
         {
-            name: 'success',
-            value: argbFromHex('#2e7d32'),
+            name: "success",
+            value: argbFromHex("#2e7d32"),
             blend: true
         },
         {
-            name: 'warning',
-            /*value: argbFromHex('#ed6c02'),*/
-            value: argbFromHex('#f59e0b'),
+            name: "warning",
+            /*value: argbFromHex("#ed6c02"),*/
+            value: argbFromHex("#f59e0b"),
             blend: true
         }
     ]);
@@ -84,7 +84,7 @@ export const generateDesignTokens = (themeMode: ThemeMode, tonalPalette: TonalPa
         inverseOnSurface: getColorToken(themeMode, neutral, 95, 20),
 
         inversePrimary: getColorToken(themeMode, primary, 80, 40),
-        inverseOnPrimary: '',
+        inverseOnPrimary: "",
 
         shadow: getColorToken(themeMode, neutral, 0, 0),
         scrim: getColorToken(themeMode, neutral, 0, 0),

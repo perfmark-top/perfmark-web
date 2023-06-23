@@ -2,13 +2,13 @@
 import {
     Theme,
     ComponentsProps, ComponentsOverrides, ComponentsVariants
-} from '@mui/material';
+} from "@mui/material";
 
 interface M3Menu {
     MuiMenu: {
-        defaultProps?: ComponentsProps['MuiMenu'];
-        styleOverrides?: ComponentsOverrides<Theme>['MuiMenu'];
-        variants?: ComponentsVariants['MuiMenu'];
+        defaultProps?: ComponentsProps["MuiMenu"];
+        styleOverrides?: ComponentsOverrides<Theme>["MuiMenu"];
+        variants?: ComponentsVariants["MuiMenu"];
     }
 }
 
@@ -16,7 +16,7 @@ export const getMenu = (theme: Theme): M3Menu => {
     const { palette } = theme;
     return {
         MuiMenu: {
-            defaultProps: { color: 'default' },
+            defaultProps: { color: "default" },
             styleOverrides: {
                 root: {
                 },
