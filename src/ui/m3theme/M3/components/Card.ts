@@ -3,7 +3,7 @@ import {
     Theme,
     ComponentsProps, ComponentsOverrides, ComponentsVariants
 } from '@mui/material';
-import { StateLayer, getStateLayerColor } from '../../index';
+import { StateLayer, getStateLayerColor } from '../..';
 import { alpha } from '@mui/material';
 
 declare module '@mui/material/Paper' {

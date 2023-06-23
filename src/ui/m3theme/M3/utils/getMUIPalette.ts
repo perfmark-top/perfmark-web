@@ -1,5 +1,5 @@
 
-import { ThemeMode, ThemeScheme, TonalPalette } from "../../index";
+import { ThemeMode, ThemeScheme, TonalPalette } from "../..";
 import { ThemeOptions, } from '@mui/material';
 
 declare module '@mui/material/styles/createTheme' {

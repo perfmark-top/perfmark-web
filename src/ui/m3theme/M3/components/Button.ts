@@ -3,7 +3,7 @@ import {
     Theme,
     ComponentsProps, ComponentsOverrides, ComponentsVariants, alpha
 } from '@mui/material';
-import { StateLayer, getStateLayerColor } from '../../index';
+import { StateLayer, getStateLayerColor } from '../..';
 
 declare module '@mui/material/Button' {
     interface ButtonPropsVariantOverrides {

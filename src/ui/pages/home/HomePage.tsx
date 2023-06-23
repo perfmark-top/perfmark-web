@@ -1,21 +1,23 @@
-import React, { useState} from "react";
-import {Outlet, useLocation, useNavigate} from "react-router-dom";
+import React, {FC, useState} from "react";
 
 import "../../../assets/css/HomePage.scss"
-import {Box, Drawer, SxProps, useMediaQuery, useTheme} from "@mui/material";
+import {Outlet} from "react-router-dom";
+import HomeDrawer from "../../component/home/HomeDrawer";
+import HomeAppBar from "../../component/home/HomeAppBar";
+import {Box, SxProps, useMediaQuery, useTheme} from "@mui/material";
 
 const drawerWidth = 260;
 
-export default function HomePage() {
-    const theme = useTheme();
-    const isSmUp = useMediaQuery(theme.breakpoints.up('md'));
+const HomePage: FC = () => {
+    const theme = useTheme()
+    const isSmUp = useMediaQuery(theme.breakpoints.up('md'))
 
     const [ isMobileOpen, setMobileOpen ] = useState(false)
 
     const rootStyles: SxProps = {
-        display: 'flex',
-        minHeight: '100vh',
-    };
+        display: "flex",
+        minHeight: "100vh"
+    }
     const navStyles: SxProps = {
         width: { md: drawerWidth },
         flexShrink: { md: 0 },
@@ -28,7 +30,7 @@ export default function HomePage() {
     const containerStyles: SxProps = {
         p: 0,
         flex: 1,
-    };
+    }
 
     return (
         <Box sx={rootStyles}>
@@ -38,14 +40,15 @@ export default function HomePage() {
                         PaperProps={{ style: { width: drawerWidth } }}
                         variant="temporary"
                         open={isMobileOpen}
-                        onClose={() => setMobileOpen(false)} />
+                        onClose={() => setMobileOpen(false)}
+                    />
                 )}
                 <HomeDrawer variant="permanent"
                             PaperProps={{ style: { width: drawerWidth } }}
                             sx={{ display: { md: 'block', sm: 'none', xs: 'none' } }} />
             </Box>
             <Box sx={homeStyles}>
-                {/*<HomeAppBar onDrawerToggle={() => setMobileOpen(!isMobileOpen)} />*/}
+                <HomeAppBar onDrawerToggle={() => setMobileOpen(!isMobileOpen)} />
                 <Box sx={containerStyles}>
                     <Outlet />
                 </Box>
@@ -53,3 +56,5 @@ export default function HomePage() {
         </Box>
     )
 }
+
+export default HomePage

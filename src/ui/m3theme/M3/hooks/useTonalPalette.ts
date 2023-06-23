@@ -1,5 +1,5 @@
 import { argbFromHex, hexFromArgb, themeFromSourceColor } from '@material/material-color-utilities'
-import { TonalPalette, TonalPaletteDefault } from '../../index';
+import { TonalPalette, TonalPaletteDefault } from '../..';
 import { useLayoutEffect, useState } from 'react';
 
 export const TONAL_PALETTE_KEY = 'TonalPaletteKey';

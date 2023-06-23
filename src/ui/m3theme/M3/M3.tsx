@@ -6,7 +6,7 @@ import M3Theme from "./wrapper/M3Theme";
 
 interface M3Props {
     children?: React.ReactNode;
-}
+};
 
 const M3 = ({ children }: M3Props) => {
 

@@ -1,5 +1,5 @@
 import { Theme, ComponentsProps, ComponentsOverrides, ComponentsVariants } from "@mui/material";
-import { StateLayer, getStateLayerColor } from "../../index";
+import { StateLayer, getStateLayerColor } from "../..";
 
 interface M3Fab {
     MuiFab: {
