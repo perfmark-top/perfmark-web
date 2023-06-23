@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import reportWebVitals from './reportWebVitals';
-import App from "./component/App";
+import App from "./ui/pages/App";
+import M3 from "./ui/m3theme/M3/M3";
 
 ReactDOM.render(
-    <React.StrictMode>
+    <M3>
         <App />
-    </React.StrictMode>,
-    document.getElementById("root")!
+    </M3>,
+    document.getElementById("root")
 )
 
 

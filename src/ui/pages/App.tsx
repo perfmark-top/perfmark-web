@@ -8,11 +8,11 @@ import React from "react";
 
 const router = createBrowserRouter(
     createRoutesFromElements(
-        <Route path="/" element={HomePage}>
-            <Route path="/gpu" element={GpuListFragment} />
-            <Route path="/cpu" element={CpuListFragment} />
-            <Route path="/gpu/:id" element={GpuInfoFragment} />
-            <Route path="/cpu/:id" element={CpuInfoFragment} />
+        <Route path="/" element={<HomePage />}>
+            <Route path="/gpu" element={<GpuListFragment />} />
+            <Route path="/cpu" element={<CpuListFragment />} />
+            <Route path="/gpu/:id" element={<GpuInfoFragment />} />
+            <Route path="/cpu/:id" element={<CpuInfoFragment />} />
         </Route>
     )
 )
