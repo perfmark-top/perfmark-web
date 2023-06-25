@@ -7,6 +7,7 @@ import {useTranslation} from "react-i18next";
 
 import DarkIcon from "@mui/icons-material/DarkModeOutlined";
 import LightIcon from "@mui/icons-material/LightModeOutlined";
+import {GitHub} from "@mui/icons-material";
 
 interface HeaderProps {
     onDrawerToggle?: () => void,
@@ -36,17 +37,27 @@ const HomeAppBar: FC<HeaderProps> = (props) => {
                     </Grid>
                 </Grid>
                 <Grid item xs></Grid>
-                <Grid item>
+                <Grid item sx={{ display: { md: "none", sm: "block" } }}>
                     <Tooltip title={t("switch-theme")}>
                         <IconButton size={"large"} color={"inherit"}
                                     onClick={toggleTheme}>
                             {themeMode == "light" ? <DarkIcon /> : <LightIcon />}
                         </IconButton>
                     </Tooltip>
+                    <Tooltip title={t("github")}>
+                        <IconButton size={"large"} color={"inherit"}
+                                    onClick={goToGithub}>
+                            <GitHub />
+                        </IconButton>
+                    </Tooltip>
                 </Grid>
             </Toolbar>
         </AppBar>
     )
+}
+
+const goToGithub = () => {
+    window.open("https://github.com/perfmark-top", "_blank")
 }
 
 export default HomeAppBar
